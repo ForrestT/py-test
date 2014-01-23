@@ -44,5 +44,6 @@ for i in range(0,args.repeat):
 	chaddr[5] = i
 	DATA = op+htype+hlen+hops+xid+secs+pad1+ciaddr+yiaddr+siaddr+giaddr+chaddr+sname+bfile+vend
 	sock.sendto(DATA, (UDP_IP, UDP_PORT))
+	print "bootp request send as: ",ciaddr
 
 print "done"
